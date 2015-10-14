@@ -1,0 +1,15 @@
+<form class="login" name="login" ng-submit="loginCtrl.login.login()">
+    <h2>Login</h2>
+    <div class="row">
+        <label>Username</label>
+        <input ng-model="loginCtrl.login.username" type="text" name="username" autofocus="">
+    </div>
+    <div class="row">
+        <label>Password</label>
+        <input ng-model="loginCtrl.login.password" type="password" name="password">
+    </div>
+    <div class="row">
+        <button type="submit" name="login">Login</button>
+    </div>
+
+</form>

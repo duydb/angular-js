@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="SkeletonAngularJS">
+    <head>
+        <title>Skeleton Angular</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!--css-->
+        <link rel="stylesheet" href="component/css/style.css">
+        <!--libs-->
+        <script src="component/js/libs/angular.min.js"></script>
+        <script src="component/js/libs/angular-route.min.js"></script>
+        <script src="component/js/libs/angular-cookies.min.js"></script>
+        <script src="component/js/libs/angular-mocks.js"></script>
+        <!--app-->
+        <script src="index.js"></script>
+        <script src="routing.js"></script>
+        <script src="config/api.config.js"></script>
+        <script src="service/auth.js"></script>
+        <script src="service/req-api-comp.js"></script>
+        <script src="service/weather-comp.js"></script>
+        <script src="view/main-controllers.js"></script>
+        <script src="service/login-comp.js"></script>
+
+        <script src="view/login/login.js"></script>
+        <script src="view/view1/view1.js"></script>
+        <script src="view/view2/view2.js"></script>
+        <script src="view/error-pages/error-pages.js"></script>
+    </head>
+    <body ng-controller="SkeletonAngularJS.Controller as mainCtrl">
+        <header>
+            <h1>Skeleton Angular</h1>
+            <nav class="action" ng-if="ui.user !== null">
+                <ul class="fl">
+                    <li ng-class="{'selected':mainCtrl.isTab(mainCtrl.$ROUTING.view1)}"><a href="#/view1">view 1</a></li>
+                    <li ng-class="{'selected':mainCtrl.isTab(mainCtrl.$ROUTING.view2)}"><a href="#/view2">view 2</a></li>
+                    <!--<li><a href="#/error-pages/404">404 Page</a></li>-->
+                    <!--<li><a href="#/error-pages/500">500 Page</a></li>-->
+                    <!--<li><a href="#/error-pages/access-denied">Access Denied Page</a></li>-->
+                </ul>
+                <ul class="fr" ng-controller="logoutController as logoutCtrl">
+                    <li><a href="">{{ui.user.username}}</a></li>
+                    <li><a ng-click="logoutCtrl.logout()" href="">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--<hr>-->
+        <div class="content" ng-view></div>
+    </body>
+</html>

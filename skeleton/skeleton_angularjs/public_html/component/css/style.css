@@ -1,0 +1,82 @@
+/* 
+    Created on : Jun 23, 2015, 11:01:02 AM
+    Author     : duydb
+*/
+body{ 
+    position: relative;
+}
+header {
+    width: 100%;
+    float: left;
+    height: 35px;
+    border-bottom: 2px solid #ddd;
+}
+header h1{
+    font-size: 25px;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0 40px 0 0;
+}
+header ul{
+    list-style-type: none;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+header ul li{
+    float: left;
+    display: block;
+    padding: 6px 20px;
+    border-right: #ddd solid 1px;
+}
+header ul li.selected{
+    font-weight: 700;
+}
+header ul li:last-child{
+    border-right: none;
+}
+header ul li a {
+    text-decoration: none;
+    color: #222;
+}
+.content{
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+.login{
+    height: 300px;
+    width: 200px;
+    padding: 30px;
+    margin: 10px auto;
+}
+.login h2{
+    text-align: center;
+}
+.login .row{
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    float:left;
+}
+.login .row input{
+    display: block;
+    float: left;
+    width: 190px;
+    padding: 5px 3px;
+}
+.login .row button{
+    width: 100%;
+    padding: 5px 0px;}
+.go-back{
+    text-decoration: none;
+    color:blue;
+}

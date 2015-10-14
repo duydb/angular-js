@@ -1,0 +1,19 @@
+<span>Time</span>
+<i>{{view1Ctrl.curTime}}</i>
+<br>
+<a href="" ng-click="view1Ctrl.refreshTime()">Refresh Time</a>
+<br>
+<br>
+<form name="get-current-weather" ng-submit="view1Ctrl.getCurrentWeather(view1Ctrl.weather.city, view1Ctrl.weather.country)">
+    <label>Country</label>
+    <input type="text" name="country" placeholder="Country" ng-model="view1Ctrl.weather.country">
+    <label>City</label>
+    <input type="text" name="city" placeholder="City" ng-model="view1Ctrl.weather.city">
+    <input type="submit" name="btn-submit" value="Get Current Weather">
+</form>
+<div class="" style="margin-top:20px">
+    <label>Response</label>
+    <br>
+    <textarea ng-model="view1Ctrl.weather.data" style="width:537px; height: 500px"></textarea>
+    <!--<div>{{view1Ctrl.weather.data}}</div>-->
+</div>
